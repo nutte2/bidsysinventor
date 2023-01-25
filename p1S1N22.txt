@@ -1,0 +1,8 @@
+generate 30000000
+produce 22000
+vulnerable none
+dealer north
+condition shape(north, 5xxx + 6xxx + 7xxx + 8xxx) && hcp(north)>11 && hcp(north)<22 && shape(south, 0xxx + 1xxx + 2xxx) && hcp(south)>7 && hcp(south)<12
+action csvrpt(north,east,south,west,spades(north),hearts(north),diamonds(north),clubs(north),hcp(north),ltc(north),controls(north),spades(south),hearts(south),diamonds(south),clubs(south),hcp(south),ltc(south),controls(south),trix(deal),par(NS),par(EW))
+
+
