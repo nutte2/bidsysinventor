@@ -1,0 +1,87 @@
+# 5542 Bidding system Kalle Prorok 2023-11-21 V1
+
+# Definitions
+M=H|S
+m=C|D
+R=D|H #red suits
+
+bal=<4333>|<4432>|<5332> # <> denotes any shape
+mm=4+C,4+D
+
+#Openings
+1C weak) 11-14 bal, strong) 18-19 bal, clubs) 11+ 4+C # variants of meanings
+1M 11-20, 5+M
+1N 15-17,bal,4-M
+
+#1C bidding
+1C:
+1D 0+ 4+H
+1H 0+ 4+S
+1S a) 6-11 3-M b) gf mm c) 0-11 6+mm
+1N 12-13 bal 3-M
+2C 10+ 5+C
+2D 10+ 5+D
+2M 5-9 6+M
+2N 5-9 55+mm
+3m 5-9 6+m
+3M gf 1-M 55+mm
+3N 13-17 bal
+4C 8-12 good 7+H
+4D 8-12 good 7+S
+4M 8-12 bad 7+M
+
+1C-1D:
+1H a)11-14 bal 2-3H b) 11-14 4+C 2-3H
+1S 11+ unbal 4+C 4+S
+1N 18-19 bal 2-3H
+2C 11-16 a) 6+C 2-H b) 5+C 1-H
+2D 17+ 5+C 4+D
+2H 11-14 4H a) bal b) 4+C
+2S 14-17 4H 1-S
+2N a) 18+hfp 4+H 4+C b) 17+ 6+C 2-H # hfp=incl distributional points
+3C 17-20 6+C 3H
+3D 18-19 bal 4+H
+3H 11-13.5 6+C 4+H
+
+1C-1H:
+1S a)11-14 bal 2-3S b) 11-14 4+C 2-3S
+1N 18-19 bal 2-3S
+2C 11-16 a) 6+C 2-S b) 5+C 1-S
+2D 17+ 5+C 4+D
+2H 17+ 5+C 4+H
+2S 11-14 4S a) bal b) 4+C
+2N a) 18+hfp 4+S 4+C b) 17+ 6+C 2-S
+3C 17-20 6+C 3S
+3D 18-19 bal 4+S
+3H 14-17 4S 1-H
+3S 11-13.5 6+C 4+S
+
+1C-(X): # Disturbed 1C bidding
+XX 
+1D 5+ 4+H
+
+#Major suit bidding
+1M:
+1oM 6+,4+oM
+1N nosupport) 7-11 2-M, weaksupport) 5-7 3M
+2m 11+,4+m
+2M 8-10,3M
+2N 11+,4+M ts=M # Set trump suit
+3C 7-10,4+M  ts=M # Set trump suit
+3D 11-12,3M
+3M 4-6, 4+M
+
+#Variants - overrides earlier general rules
+1H:
+2S 5-8 6+S 1-H
+
+
+1N:
+2C invite) 8-9 bal, majorask) 
+2R
+
+*-4N: # Any situation
+5C weak) 1A, strong) 4A
+5D weak) 0A, strong) 3A 
+5H !ts.Q 2A
+5S ts.Q 2A
